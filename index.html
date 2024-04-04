@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,7 +7,6 @@
         <meta charset="utf-8"/>
         <meta name="author" content="Molly McHenry"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -17,26 +18,200 @@
     <body>
         <h1>Development</h1>
         <div class="contents">
-            <!-- Description of the Assignment -->
-            <p>
-                Assignment Description
-            </p>
             
             <p>
             Jump to: <a variant="nav-link" pr="0" href="#Overview">Overview</a> • 
-                    <!-- <a variant="nav-link" pr="1" href="#Webpage-modification">Webpage Modification</a> • 
-                    <a variant="nav-link" pr="2" href="#Hypotheses">Hypotheses</a> • 
-                    <a variant="nav-link" pr="3" href="#Statistical-Analysis">Statistical Analysis</a> •  -->
-                    <a variant="nav-link" pr="4" href="#Conclusion">Conclusion</a>
+                     <a variant="competitive-analysis" pr="1" href="#Competitive-analysis">Competitive Analysis</a> • 
+                     <a variant="my-favoriting-site" pr="2" href="#My-Design">My Design</a> • 
+                     <a variant="finished-page" pr="3" href="#Finished-Page">The Product</a> • 
+                     <a variant="nav-link" pr="4" href="#Conclusion">Conclusion</a>
             </p>
 
             <!-- Overview -->
             <div id="Overview" class="assignment-segment">
                 <h2>Overview</h2>
+                
+                <!-- Description of the Assignment -->
+                <p>
+                    In an attempt to design an interface that allows users to filter, sort, and favorite songs and then view their 
+                    favorited songs in an aggregator. To accomplish this, I first analyzed and compared five desktop music platforms with 
+                    these features: <a href="https://open.spotify.com/">Spotify</a>, <a href="https://www.deezer.com/us/channels/explore/explore-tab">Deezer</a>, and <a href="https://music.youtube.com/">Youtube Music</a>. I then took my findings and created 
+                    my interface using React.js.
+                </p>
+            </div>
+
+            <div id="Competitive-analysis" class="competitive-analysis">
+                <h2>Competitive Analysis</h2>
+
+                <h3>The Interfaces</h3>
+                <p>Below are video walkthroughs showcasing the UserInterfaces to explore, favorite, and view songs in the aggregator for the desktop sites of Spotify, 
+                    Youtube Music, and Deezer. It may be important to note that the free versions of each of these applications were used.</p>
+
+                <div id="interface-section-container"> 
+                    <div class="interface-section">
+                        <h4>Spotify</h4>
+                        <div class="ui-walkthrough-video-container">
+                            <div class="ui-walkthrough-video">
+                                <iframe src="https://www.loom.com/embed/2701b7a011d54728a54e00a673567d4d?sid=8cdfbd14-c90a-452d-ba33-6aeac70d73ec" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interface-section">
+                        <h4>Youtube Music</h4>
+                        <div class="ui-walkthrough-video-container">
+                            <div class="ui-walkthrough-video">
+                                <iframe src="https://www.loom.com/embed/dbfd7386c8a54860820a207210b0c02c?sid=74614ac9-235b-46ff-a94f-9f2e294608ba" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interface-section">
+                        <h4>Deezer</h4>
+                        <div class="ui-walkthrough-video-container">
+                            <div class="ui-walkthrough-video">
+                                <iframe src="https://www.loom.com/embed/2701b7a011d54728a54e00a673567d4d?sid=8dc340d3-b880-498c-9e70-90cee63ec900" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <h3>Competitive Comparison Chart</h3>
+
+                <p>Below is a competitive comparison chart with my findings from comparing the filter, sorting, and favoriting features of songs in 
+                    Spotify, Soundcloud, Deezer, Amazon Music, and and Youtube Music. More specifically, I looked at the desktop interface where users can search through 
+                    songs and favorites them, including how users can filter and sort the songs they're looking through, and I looked at the aggregator of favorited songs 
+                    on each of these desktop apps.
+                </p>
+
+                <div id="comparison-chart">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> </th>
+                                <th>Spotify</th>
+                                <th>Deezer</th>
+                                <th>Youtube Music</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Default sorting on favorited songs</td>
+                                <td>Date added</td>
+                                <td>Date added</td>
+                                <td>Date added</td>
+                            </tr>
+
+                            <tr>
+                                <td>Sorting options on favorited songs</td>
+                                <td>Alphabetically<br>by length<br>by popularity<br>by date added (default)</td>
+                                <td className="false-comp-chart">X</td>
+                                <td className="false-comp-chart">X</td>
+                            </tr>
+
+                            <tr>
+                                <td>Alternate View of favorited list</td>
+                                <td>Compressed</td>
+                                <td className="false-comp-chart">X</td>
+                                <td className="false-comp-chart">X</td>
+                            </tr>
+
+                            <tr>
+                                <td>Lag on Unfavorited Song Disappearance</td>
+                                <td className="false-comp-chart">X</td>
+                                <td>~3 seconds</td>
+                                <td>Stays until page refreshed</td>
+                            </tr>
+
+                            <tr>
+                                <td>Visible Liked Symbol</td>
+                                <td>Hover for like button</td>
+                                <td>Heart symbol always visible</td>
+                                <td className="false-comp-chart">X</td>
+                            </tr>
+
+                            <tr>
+                                <td>Number of Clicks required to favorite a song</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+
+                            <tr>
+                                <td>Song indicated as liked in discovery</td>
+                                <td>Green check icon</td>
+                                <td>Solid heart</td>
+                                <td className="false-comp-chart">X</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    While Spotify, Deezer, and Apple Music all present individual songs in similar forms–as horizontally-spanning rectangles listed one on top of the other–their favoriting interfaces have 
+                    notable differences. Spotify's greatest shortcoming was the lack of sorting within lists of songs, both explored and within the liked songs aggregator.
+                    It's sucess, in my opinion, lies primarily in the sleekness of the interface, which includes the presentation of relevant information of each song without over-cluttering the space. 
+                    Deezer, on the other hand, seems to showcase too much information about each song, both when exploring songs and in the aggregator. This clutter of unnecessary information could pose issues 
+                    with clarity and overwhelming users, although the use of white space seems to rectify the possible issue. I do think that Deezer could benefit from an alterate view of songs withing the aggregator, much 
+                    like Spotify's compressed view option. Deezer's strength, ubdoubtedly, is its sorting options available for all songs lists, both in the liked songs and explore sections. 
+                    
+                    Youtube Music had the weakest UI in my opinion. The obvious issue is the lack of efficiency in liking songs: it takes a user 
+                    three clicks to add a song to the favorited list, and the favoriting feature seems to be hidden, causing issues with efficiency and learnability. 
+                    There are also no sorting options within song lists, both exporable and favorited. I do enjoy the easy navigation of filtering songs by moods and genres, and consider it one of Youtube Music's few sucesses in terms of UI.
+
             </div>
           
+            <div id="My-Design" class="my-favoriting-site">
+                <h2>My Design</h2>
+                    <h3>Ideation</h3>
+                    <p> From the above competitive analysis, I created the following list of factors and designs to incorporate in my own design:</p>
+                    <ol>
+                        <li> Sorting both within discoverable items and within the aggregator</li>
+                        <li> Hovering over an item shows favorite button (Spotify)</li>
+                        <li> Delay after unfavoriting an item before it's removed from the aggregator to allow user to refavorite</li>
+                        <li> Filtering by categories common to items (Youtube Music). In the context of songs, I'd like to expand this to allow for multiple genre filters 
+                            to be available at once in otrder to capture more niche sub-genres and cross-genre spaces.</li>
+                        <li> I'd like to incorporate at least one sort based on the qualities of a song... i.e. if a song is happy or mellow. This will hopefully help users not just 
+                            sort songs based on their titles or lenght, but also based on the contents of the songs themselves.</li>
+                        <li> Liking a song takes a single click </li>
+                        <li> Hovering and button clicks show extraneous information rather than having it visible at all times for each song </li>
+                    </ol>
+                    
+                    <p>Using these ideas, I created a very basic sketch in Figma of the general layout of my page. Note that the information necessary to the filters is intended to be displayed 
+                        in a popup once the user hits the info button on the item card. Also of note, I elected to only feature sorting in the aggregator because the filter bubbles take up a significant 
+                        amount of vertical space and make the section look cluttered. 
+                    </p>
+
+                    <div class="img-container">
+                        <img src="./mockup.png" alt="image of my mockup design"/>
+                    </div>
+                </div>
+                <div id="Finished-Page" class="finished-page">
+                    <h2>The Product</h2>
+                    <p>I chose to also make a song aggregator, because I love using Spotify and was inspired by the new UI ideas I hadn't seen before as a newbie to Deezer and Youtube Music. 
+                        I intend to allow users to easily navigate a song discovery panel by having the option to filter by genre(s) and sort alphabetically, by release date, popularity, and danceability. 
+                        (Note that danceability was chosen because it was the most accessible quantifiable metric of song characteristics from the Spotify API.) The aggregator holds the favorited songs and 
+                        counts how many total songs have been liked. Because my web page doesn't actually play the songs, there is no need for much of the song data and buttons present in the analyzed UIs, such 
+                        as song length and play buttons. 
+                    </p>
+
+                    <div id="site-link-container">
+                        <a href="https://uiux-development.vercel.app/" id="site-link">View My Site</a>
+                    </div>
+
+                    <div class="img-container">
+                        <img src="./my-design.png" alt="image of my final site"/>
+                    </div>
+                </div>
+
+            <!-- </div> -->
+
             <div id="Conclusion" class="assignment-segment">
                 <h2>Conclusion</h2>
-                <p>TODO</p>
+                <p>Through this project I learned to balance information necessary for sorting, filtering, and aggregation with good design so that the page doesn't become cluttered and 
+                    visually overwhelming for users. The process of coding this page also served as an exercise in React state management. 
+                </p>
             </div>
         </div>
